@@ -1,7 +1,8 @@
-from .views import WorkingDetailView
+from django.urls import path,re_path
 
-from django.urls import path
+from .views import WorkDetailView, WorkListView
 
 urlpatterns = [
-    path('',WorkingDetailView.as_view()),
+    re_path(r'^$', WorkDetailView.as_view()),
+    re_path(r'^create/$', WorkListView.as_view()),
 ]

@@ -6,4 +6,4 @@ from institution.models import WorkingPlace
 class WorkingPlaceDetailSerializer(serializers.ModelSerializer):
     class Meta:
         model = WorkingPlace
-        fields = ('name', 'street', 'country', 'city')
+        fields = ('id','name', 'street', 'country', 'city')
